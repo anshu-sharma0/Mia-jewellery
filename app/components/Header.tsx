@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { businessData } from "@/data/business";
 
 const searchSuggestions = [
   "Anniversary",
@@ -14,17 +15,7 @@ const searchSuggestions = [
   "Pendants",
 ];
 
-const navCategories = [
-  { name: "Earrings", href: "#" },
-  { name: "Rings", href: "#" },
-  { name: "Bracelet & Bangles", href: "#" },
-  { name: "Necklaces & Pendants", href: "#" },
-  { name: "Mangalsutra", href: "#" },
-  { name: "Silver Jewellery", href: "#" },
-  { name: "Collections", href: "#" },
-  { name: "Gifting", href: "#" },
-  { name: "More Jewellery", href: "#" },
-];
+const navCategories = businessData.services.navCategories;
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -56,9 +47,9 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0 group" id="header-logo">
           <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight">
-            <span className="text-gradient-crimson italic">Mia</span>
+            <span className="text-gradient-crimson italic">{businessData.company.logo.primaryText}</span>
             <span className="text-[10px] sm:text-xs text-[var(--color-text-muted)] block -mt-1 font-body not-italic font-normal tracking-widest">
-              by TANISHQ
+              {businessData.company.logo.secondaryText}
             </span>
           </h1>
         </Link>
@@ -145,11 +136,11 @@ export default function Header() {
         <div className="section-container flex items-center justify-between min-w-max lg:min-w-0">
           {navCategories.map((cat) => (
             <Link
-              key={cat.name}
+              key={cat.title}
               href={cat.href}
               className="relative px-3 lg:px-4 py-3 text-white text-xs lg:text-[13px] font-medium tracking-wide whitespace-nowrap transition-colors hover:text-[var(--color-gold-light)] group font-body"
             >
-              {cat.name}
+              {cat.title}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[var(--color-gold)] transition-all duration-300 group-hover:w-3/4 rounded-full" />
             </Link>
           ))}

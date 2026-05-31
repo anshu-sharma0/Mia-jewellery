@@ -1,13 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { businessData } from "@/data/business";
 
-const promos = [
-  "✨ Free Shipping on All Orders Above ₹5,000 ✨",
-  "💎 Flat ₹500 Off on Your First Purchase — Use Code: DEMO500",
-  "🎁 Lifetime Exchange at 200+ Mia Stores Nationwide",
-  "🌟 0% Deduction on Old Gold Exchange — Upgrade Today!",
-];
+const promos = businessData.services.announcementPromos;
 
 export default function AnnouncementBar() {
   const [index, setIndex] = useState(0);

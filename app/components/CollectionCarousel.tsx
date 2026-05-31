@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { collections } from "@/data/collections";
+import { businessData } from "@/data/business";
 
 export default function CollectionCarousel() {
   const [current, setCurrent] = useState(0);
@@ -74,7 +75,7 @@ export default function CollectionCarousel() {
                 >
                   {/* Badge */}
                   <span className="absolute top-4 right-4 text-[10px] font-bold tracking-widest text-white/60 font-body">
-                    A TATA PRODUCT
+                    {businessData.company.productLabel}
                   </span>
 
                   {/* Left placeholder area */}

@@ -1,15 +1,7 @@
 import SparkleDecor from "./SparkleDecor";
+import { businessData } from "@/data/business";
 
-const promises = [
-  { icon: "diamond", title: "Certified Natural", subtitle: "Diamonds", color: "#FFE6EE" },
-  { icon: "exchange", title: "Lifetime Exchange", subtitle: "in 200+ Mia Stores", color: "#FFE6E6" },
-  { icon: "return", title: "30 Days Return*", subtitle: "Check T&C for applicable products", color: "#FFF5E6" },
-  { icon: "shipping", title: "Free Shipping", subtitle: "On all orders", color: "#E6F5FF" },
-  { icon: "warranty", title: "1 Year Warranty", subtitle: "On all purchases", color: "#F0E6F6" },
-  { icon: "hallmark", title: "BIS Hallmarked", subtitle: "Certified quality", color: "#E6FFE6" },
-  { icon: "tata", title: "TATA", subtitle: "Product", color: "#F5F5FF" },
-  { icon: "buyers", title: "6 Lakhs+", subtitle: "Happy Buyers", color: "#FFE6F5" },
-];
+const promises = businessData.services.promises;
 
 function PromiseIcon({ type }: { type: string }) {
   const icons: Record<string, JSX.Element> = {
@@ -39,7 +31,7 @@ export default function Promises() {
       {/* Section Header */}
       <div className="text-center mb-12">
         <p className="text-sm font-medium text-[var(--color-crimson)] tracking-widest uppercase font-body">
-          Mia
+          {businessData.company.shortName}
         </p>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-heading mt-2">
           Promises

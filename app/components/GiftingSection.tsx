@@ -1,15 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { businessData } from "@/data/business";
 
-const giftOccasions = [
-  "Festive Jewellery",
-  "Anniversary",
-  "Birthday",
-  "Wedding",
-  "Graduation",
-  "Just Because",
-];
+const giftOccasions = businessData.services.giftingOccasions;
 
 export default function GiftingSection() {
   const [activeOccasion, setActiveOccasion] = useState(0);

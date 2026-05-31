@@ -1,3 +1,5 @@
+import { businessData } from "@/data/business";
+
 export default function StoreLocator() {
   return (
     <section className="relative overflow-hidden" id="store-locator">
@@ -18,23 +20,23 @@ export default function StoreLocator() {
               <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.5">
                 <path d="M3 21h18M3 10h18M5 6l7-4 7 4M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4" />
               </svg>
-              <p className="text-xs mt-2 font-body tracking-wider">MIA STORE</p>
+              <p className="text-xs mt-2 font-body tracking-wider">{businessData.storeLocator.storeLabel}</p>
             </div>
           </div>
 
           {/* Text Overlay */}
           <div className="absolute right-8 sm:right-16 top-1/2 -translate-y-1/2 text-white max-w-sm">
             <p className="text-sm sm:text-base font-light tracking-wide font-body opacity-80">
-              Locate your nearest
+              {businessData.storeLocator.subtitleTop}
             </p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-heading mt-2 font-bold">
-              Mia Store
+              {businessData.storeLocator.title}
             </h2>
             <p className="text-sm sm:text-base font-light mt-3 opacity-80 font-body">
-              For an exquisite jewellery experience
+              {businessData.storeLocator.subtitleBottom}
             </p>
             <button className="mt-6 px-8 py-3 rounded-full bg-[var(--color-maroon)] text-white font-semibold text-sm tracking-wider hover:bg-[var(--color-maroon-dark)] transition-colors font-body hover:scale-105 transition-transform">
-              Find store
+              {businessData.storeLocator.cta}
             </button>
           </div>
 

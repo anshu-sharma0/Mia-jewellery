@@ -1,45 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { businessData } from "@/data/business";
 
-const slides = [
-  {
-    id: 1,
-    title: "Sunkissed",
-    subtitle: "Jewellery that blushes pink under the sun",
-    cta: "SHOP NOW",
-    gradient: "from-[#FFB6C1] via-[#FF8FAB] to-[#E8526A]",
-    textColor: "text-white",
-    badge: "A TATA PRODUCT",
-  },
-  {
-    id: 2,
-    title: "Aurum",
-    subtitle: "Go Bold With Gold.",
-    cta: "SHOP NOW",
-    gradient: "from-[#8B6914] via-[#A0522D] to-[#D2691E]",
-    textColor: "text-white",
-    badge: "A TATA PRODUCT",
-  },
-  {
-    id: 3,
-    title: "Starburst",
-    subtitle: "Shine like every star in the sky",
-    cta: "EXPLORE NOW",
-    gradient: "from-[#4A0E8F] via-[#7B2FBE] to-[#C77DFF]",
-    textColor: "text-white",
-    badge: "NEW COLLECTION",
-  },
-  {
-    id: 4,
-    title: "Manifest",
-    subtitle: "Wear your dreams. Own your story.",
-    cta: "DISCOVER",
-    gradient: "from-[#C41E3A] via-[#FF6B81] to-[#FFB3C1]",
-    textColor: "text-white",
-    badge: "TRENDING",
-  },
-];
+const slides = businessData.products.heroSlides;
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
