@@ -25,25 +25,7 @@ export interface AboutPageCopy {
     secondaryCta: string;
     highlight: string;
   };
-  story: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    bulletPoints: string[];
-  };
-  missionVision: {
-    missionTitle: string;
-    missionBody: string;
-    visionTitle: string;
-    visionBody: string;
-    promiseTitle: string;
-    promiseBody: string;
-  };
   whyChooseUs: Array<{
-    title: string;
-    description: string;
-  }>;
-  values: Array<{
     title: string;
     description: string;
   }>;
@@ -52,28 +34,11 @@ export interface AboutPageCopy {
     label: string;
     detail: string;
   }>;
-  journey: Array<{
-    label: string;
-    title: string;
-    description: string;
-  }>;
   team: Array<{
     name: string;
     role: string;
     description: string;
   }>;
-  trust: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    highlights: string[];
-  };
-  cta: {
-    title: string;
-    body: string;
-    primaryCta: string;
-    secondaryCta: string;
-  };
 }
 
 export interface CollectionsPageCopy {
@@ -458,28 +423,6 @@ export const businessData: BusinessData = {
       secondaryCta: "Visit a Store",
       highlight: "A TATA Product",
     },
-    story: {
-      eyebrow: "Our Story",
-      title: "Jewellery that makes everyday moments feel rare.",
-      body:
-        "Mia by Tanishq is built for women who want fine jewellery that works as beautifully in daily life as it does for celebrations. Our collections balance polished design, responsible craftsmanship, and the kind of trust customers expect from a heritage-led brand.",
-      bulletPoints: [
-        "Fine jewellery crafted for everyday wear and meaningful gifting.",
-        "Backed by Tanishq's service network and Tata's long-term trust.",
-        "Designed around modern silhouettes, soft colour stories, and timeless appeal.",
-      ],
-    },
-    missionVision: {
-      missionTitle: "Mission",
-      missionBody:
-        "To make premium fine jewellery accessible, wearable, and confidence-building across life's everyday milestones.",
-      visionTitle: "Vision",
-      visionBody:
-        "To be the brand customers choose when they want contemporary luxury with enduring trust.",
-      promiseTitle: "Brand Promise",
-      promiseBody:
-        "Premium design, thoughtful craftsmanship, and a shopping experience that feels calm, clear, and reassuring.",
-    },
     whyChooseUs: [
       {
         title: "Heritage trust",
@@ -500,28 +443,6 @@ export const businessData: BusinessData = {
         title: "Customer-first service",
         description:
           "Transparent policies and support that reduce friction and build long-term confidence.",
-      },
-    ],
-    values: [
-      {
-        title: "Trust",
-        description:
-          "We keep the shopping journey clear, reliable, and reassuring from discovery to delivery.",
-      },
-      {
-        title: "Craftsmanship",
-        description:
-          "Every design is shaped to feel polished, comfortable, and durable in real life.",
-      },
-      {
-        title: "Accessibility",
-        description:
-          "Luxury should feel inviting, not intimidating, so our collections are designed for broad appeal.",
-      },
-      {
-        title: "Confidence",
-        description:
-          "We create jewellery that helps customers feel distinctive without overstatement.",
       },
     ],
     stats: [
@@ -546,32 +467,6 @@ export const businessData: BusinessData = {
         detail: "Shipping, exchange, returns, and warranty-led reassurance.",
       },
     ],
-    journey: [
-      {
-        label: "Phase 01",
-        title: "Curated with heritage in mind",
-        description:
-          "The brand language was shaped to bring fine jewellery closer to everyday use without losing its premium feel.",
-      },
-      {
-        label: "Phase 02",
-        title: "Collections built around mood and occasion",
-        description:
-          "Signature stories like Sunkissed, Aurum, Starburst, and Manifest give customers easy ways to find a piece that fits their style.",
-      },
-      {
-        label: "Phase 03",
-        title: "Retail trust at scale",
-        description:
-          "A nationwide store footprint and exchange-friendly service model help reduce friction after purchase.",
-      },
-      {
-        label: "Today",
-        title: "A premium destination for modern fine jewellery",
-        description:
-          "Mia continues to combine refined design, strong service, and a calm shopping experience across channels.",
-      },
-    ],
     team: [
       {
         name: "Design Studio",
@@ -592,25 +487,6 @@ export const businessData: BusinessData = {
           "Ensures the buying journey stays transparent, helpful, and calm at every step.",
       },
     ],
-    trust: {
-      eyebrow: "Customer Trust",
-      title: "Built to reassure, not just impress.",
-      body:
-        "From hallmarked quality and free shipping to exchange support and store-backed service, the brand is designed around confidence before and after purchase.",
-      highlights: [
-        "BIS hallmarked quality",
-        "Lifetime exchange in 200+ stores",
-        "Free shipping on all orders",
-        "1 year warranty on purchases",
-      ],
-    },
-    cta: {
-      title: "Ready to find jewellery that feels like you?",
-      body:
-        "Explore the collections, compare styles, or visit a Mia store for a guided premium shopping experience.",
-      primaryCta: "Browse Collections",
-      secondaryCta: "Locate a Store",
-    },
   },
   collectionsPage: {
     hero: {

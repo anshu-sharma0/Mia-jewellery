@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { businessData } from "@/data/business";
-import CollectionsPageClient from "../components/CollectionsPageClient";
+import CollectionsPageClient from "./CollectionsPageClient";
 
 export const metadata: Metadata = {
   title: `${businessData.company.name} | Collections`,
