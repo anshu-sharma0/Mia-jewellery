@@ -18,97 +18,6 @@ export default function AboutPage() {
 
   return (
     <main className="overflow-hidden bg-ivory text-text-primary">
-      <section className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#fff_0%,var(--color-ivory)_100%)]">
-        <div className="absolute inset-x-0 top-0 h-56 bg-[radial-gradient(circle_at_top,rgba(194,38,58,0.18),transparent_65%)]" />
-        <div className="absolute -right-20 top-10 h-56 w-56 rounded-full bg-gold/15 blur-3xl" />
-        <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-rose-light/70 blur-3xl" />
-
-        <div className="section-container relative py-16 sm:py-20 lg:py-24">
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <Reveal>
-              <div className="max-w-2xl">
-                <p className="text-sm font-medium tracking-[0.3em] uppercase text-crimson font-body">
-                  {page.hero.eyebrow}
-                </p>
-                <h1 className="mt-4 text-4xl font-heading leading-tight text-text-primary sm:text-5xl lg:text-6xl">
-                  {page.hero.title}
-                </h1>
-                <p className="mt-5 max-w-xl text-base leading-relaxed text-text-muted font-body sm:text-lg">
-                  {page.hero.subtitle}
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Link
-                    href="/collections"
-                    className="inline-flex items-center justify-center rounded-full bg-crimson px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[rgba(194,38,58,0.2)] transition-transform hover:-translate-y-0.5"
-                  >
-                    {page.hero.primaryCta}
-                  </Link>
-                  <Link
-                    href="#location-map"
-                    className="inline-flex items-center justify-center rounded-full border border-crimson px-6 py-3 text-sm font-semibold text-crimson transition-colors hover:bg-crimson hover:text-white"
-                  >
-                    {page.hero.secondaryCta}
-                  </Link>
-                </div>
-
-                <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-white/80 bg-white/80 p-4 shadow-sm backdrop-blur-sm">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-text-light font-body">Trust</p>
-                    <p className="mt-2 text-sm font-semibold text-text-primary font-body">{page.hero.highlight}</p>
-                  </div>
-                  <div className="rounded-2xl border border-white/80 bg-white/80 p-4 shadow-sm backdrop-blur-sm">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-text-light font-body">Brand</p>
-                    <p className="mt-2 text-sm font-semibold text-text-primary font-body">{businessData.company.productLabel}</p>
-                  </div>
-                  <div className="rounded-2xl border border-white/80 bg-white/80 p-4 shadow-sm backdrop-blur-sm">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-text-light font-body">Network</p>
-                    <p className="mt-2 text-sm font-semibold text-text-primary font-body">
-                      {page.stats[0].value} {page.stats[0].label}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <div className="relative rounded-[2.25rem] border border-white/70 bg-white/80 p-5 shadow-[0_25px_80px_rgba(60,26,26,0.14)] backdrop-blur">
-                <div className="relative flex min-h-105 flex-col justify-between overflow-hidden rounded-3xl bg-linear-to-br from-crimson via-[#c74a67] to-gold p-6 text-white">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_38%)]" />
-                  <div className="relative">
-                    <span className="inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] font-semibold tracking-[0.35em] text-white/80 font-body">
-                      {businessData.company.parentCompany}
-                    </span>
-                    <h2 className="mt-6 text-3xl font-heading leading-tight sm:text-4xl">
-                      Modern pieces with calm, confident styling.
-                    </h2>
-                    <p className="mt-4 max-w-md text-sm leading-relaxed text-white/85 font-body sm:text-base">
-                      Fine jewellery should feel warm, wearable, and easy to trust. This page is designed around that idea.
-                    </p>
-                  </div>
-
-                  <div className="relative grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-2xl bg-white/14 p-4 backdrop-blur-sm">
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 font-body">Network</p>
-                      <p className="mt-2 text-lg font-semibold font-body">200+ Stores</p>
-                    </div>
-                    <div className="rounded-2xl bg-white/14 p-4 backdrop-blur-sm">
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 font-body">Promise</p>
-                      <p className="mt-2 text-lg font-semibold font-body">Premium, everyday friendly</p>
-                    </div>
-                    <div className="rounded-2xl bg-white/14 p-4 backdrop-blur-sm sm:col-span-2">
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 font-body">Coordinates</p>
-                      <p className="mt-2 text-sm font-semibold font-body">
-                        {storeLatitude.toFixed(4)}, {storeLongitude.toFixed(4)}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 sm:py-20">
         <div className="section-container">
@@ -118,7 +27,7 @@ export default function AboutPage() {
                 <SectionHeader
                   eyebrow="Our Story"
                   title="Built for women who want jewellery that works every day."
-                  description="Mia by Tanishq balances polished design, responsible craftsmanship, and the trust customers expect from a heritage-led brand."
+                  description={`${businessData.company.name} balances polished design, responsible craftsmanship, and the trust customers expect from a heritage-led brand.`}
                   align="left"
                 />
                 <ul className="mt-6 space-y-3">
@@ -232,7 +141,7 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeader
               eyebrow="Team"
-              title="The collective that shapes the Mia experience."
+              title="The collective that shapes the experience."
               description="A compact view of the teams that influence design, quality, and customer support across the brand."
             />
           </Reveal>
@@ -259,7 +168,7 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeader
               eyebrow="Store Locator"
-              title="Find the nearest Mia store on the map."
+              title={`Find the ${businessData.company.name} store on the map.`}
               description="The embedded map is driven from business data so the location can stay centralized and easy to update."
             />
           </Reveal>
@@ -269,7 +178,7 @@ export default function AboutPage() {
               <div className="overflow-hidden rounded-4xl border border-white/80 bg-white p-4 shadow-sm">
                 <div className="aspect-16/10 overflow-hidden rounded-3xl bg-ivory">
                   <iframe
-                    title="Mia store location map"
+                    title={`${businessData.company.name} store location map`}
                     src={mapSrc}
                     loading="lazy"
                     className="h-full w-full border-0"
@@ -312,29 +221,6 @@ export default function AboutPage() {
                 </a>
               </div>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[linear-gradient(135deg,#7e1d31_0%,#9f3b53_55%,#c98858_100%)] py-14 text-white">
-        <div className="section-container">
-          <div className="flex flex-col gap-6 rounded-4xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm sm:p-8 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-sm font-medium tracking-[0.3em] uppercase text-white/70 font-body">Next step</p>
-              <h3 className="mt-4 text-3xl font-heading sm:text-4xl">Explore the collections that define the brand story.</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/80 font-body sm:text-base">
-                The about page now closes with a clearer path to shopping and store discovery.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <Link href="/collections" className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-maroon transition-transform hover:-translate-y-0.5">
-                View Collections
-              </Link>
-              <Link href="#location-map" className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">
-                Open Map
-              </Link>
-            </div>
           </div>
         </div>
       </section>

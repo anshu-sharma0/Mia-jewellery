@@ -153,14 +153,6 @@ export interface BusinessData {
   aboutPage: AboutPageCopy;
   collectionsPage: CollectionsPageCopy;
   testimonials: BusinessTestimonial[];
-  footer: {
-    appDownloadTitle: string;
-    appDownloadSubtitle: string;
-    newsletterText: string;
-    newsletterPlaceholder: string;
-    currencyOptions: string[];
-    paymentMethods: string[];
-  };
   storeLocator: {
     storeLabel: string;
     title: string;
@@ -265,15 +257,12 @@ export const businessData: BusinessData = {
       { title: "Lifetime Exchange Policy", href: "#" },
     ],
     navCategories: [
-      { title: "Earrings", href: "#" },
-      { title: "Rings", href: "#" },
-      { title: "Bracelet & Bangles", href: "#" },
-      { title: "Necklaces & Pendants", href: "#" },
-      { title: "Mangalsutra", href: "#" },
-      { title: "Silver Jewellery", href: "#" },
-      { title: "Collections", href: "/collections" },
-      { title: "Gifting", href: "#" },
-      { title: "More Jewellery", href: "#" },
+      { title: "Home", href: "/" },
+      { title: "Collections", href: "collections" },
+      { title: "Silver", href: "#" },
+      { title: "Diamond", href: "#" },
+      { title: "About Us", href: "/about" },
+      { title: "Contact Us", href: "/contact" },
     ],
     promises: [
       {
@@ -552,14 +541,6 @@ export const businessData: BusinessData = {
       text: "When I first got to know about it, I was amazed at the variety and the quality. Every piece feels like it was made just for me. The attention to detail is incredible.",
     },
   ],
-  footer: {
-    appDownloadTitle: "Download the Mia app",
-    appDownloadSubtitle: "for exclusive offers!",
-    newsletterText: "Stay updated with our latest collections & offers",
-    newsletterPlaceholder: "Enter your email",
-    currencyOptions: ["INR(₹)", "Dollar"],
-    paymentMethods: ["Visa", "Mastercard", "UPI", "Net Banking"],
-  },
   storeLocator: {
     storeLabel: "MIA STORE",
     title: "Mia Store",

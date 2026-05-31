@@ -136,17 +136,6 @@ export default function Footer() {
 
           {/* App + Social + Currency */}
           <div>
-            <h3 className="text-lg font-heading font-semibold mb-4">{businessData.footer.appDownloadTitle}</h3>
-            <p className="text-sm text-white/70 font-body mb-6">{businessData.footer.appDownloadSubtitle}</p>
-
-            {/* QR Code placeholder */}
-            <div className="w-28 h-28 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-8">
-              <div className="grid grid-cols-5 gap-0.5 w-20 h-20">
-                {qrPattern.map((className, index) => (
-                  <div key={index} className={`w-full h-full ${className}`} />
-                ))}
-              </div>
-            </div>
 
             {/* Social */}
             <h3 className="text-base font-heading font-semibold mb-3">Social</h3>
@@ -163,28 +152,6 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Currency */}
-            <h3 className="text-base font-heading font-semibold mb-3">Currency</h3>
-            <div className="flex items-center gap-2">
-              <button className="px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium font-body">{businessData.footer.currencyOptions[0]}</button>
-              <button className="px-4 py-1.5 rounded-full bg-white/5 text-sm font-medium text-white/60 hover:bg-white/10 transition-colors font-body">{businessData.footer.currencyOptions[1]}</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter */}
-      <div className="border-t border-white/10">
-        <div className="section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/60 font-body">{businessData.footer.newsletterText}</p>
-          <div className="flex items-center gap-2 w-full sm:w-auto max-w-md">
-            <input
-              type="email"
-              placeholder={businessData.footer.newsletterPlaceholder}
-              className="flex-1 h-10 px-4 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-white/40 outline-none focus:border-gold transition-colors font-body"
-              id="newsletter-email"
-            />
-            <button className="btn-gold text-xs px-5 py-2.5">Subscribe</button>
           </div>
         </div>
       </div>
@@ -195,11 +162,6 @@ export default function Footer() {
           <p className="text-xs text-white/40 font-body">
             {businessData.legal.copyrightText}
           </p>
-          <div className="flex items-center gap-4">
-            {businessData.footer.paymentMethods.map((method) => (
-              <span key={method} className="text-xs text-white/40 font-body">{method}</span>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
