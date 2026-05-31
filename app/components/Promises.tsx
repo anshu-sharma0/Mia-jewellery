@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import SparkleDecor from "./SparkleDecor";
 import { businessData } from "@/data/business";
 
 const promises = businessData.services.promises;
 
 function PromiseIcon({ type }: { type: string }) {
-  const icons: Record<string, JSX.Element> = {
+  const icons: Record<string, ReactNode> = {
     diamond: <path d="M12 2L2 9.5L12 22L22 9.5L12 2ZM12 2L7 9.5M12 2L17 9.5M2 9.5H22" />,
     exchange: <><path d="M4 12h16M8 8l-4 4 4 4" /><path d="M20 12H4M16 16l4-4-4-4" /></>,
     return: <><path d="M3 12a9 9 0 1 0 9-9" /><path d="M3 3v6h6" /></>,
@@ -23,14 +24,14 @@ function PromiseIcon({ type }: { type: string }) {
 
 export default function Promises() {
   return (
-    <section className="py-16 sm:py-20 bg-[var(--color-rose-light)] relative overflow-hidden" id="mia-promises">
+    <section className="py-16 sm:py-20 bg-rose-light relative overflow-hidden" id="mia-promises">
       {/* Decorative sparkles */}
       <SparkleDecor size="lg" className="absolute top-8 left-12 opacity-25" color="var(--color-crimson-light)" />
       <SparkleDecor size="md" className="absolute bottom-12 right-20 opacity-20" color="var(--color-crimson-light)" />
 
       {/* Section Header */}
       <div className="text-center mb-12">
-        <p className="text-sm font-medium text-[var(--color-crimson)] tracking-widest uppercase font-body">
+        <p className="text-sm font-medium text-crimson tracking-widest uppercase font-body">
           {businessData.company.shortName}
         </p>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-heading mt-2">
@@ -52,10 +53,10 @@ export default function Promises() {
               >
                 <PromiseIcon type={promise.icon} />
               </div>
-              <p className="text-sm font-semibold text-[var(--color-text)] font-body">
+              <p className="text-sm font-semibold text-text-primary font-body">
                 {promise.title}
               </p>
-              <p className="text-xs text-[var(--color-text-muted)] mt-0.5 font-body leading-relaxed">
+              <p className="text-xs text-text-muted mt-0.5 font-body leading-relaxed">
                 {promise.subtitle}
               </p>
             </div>

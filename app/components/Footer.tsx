@@ -8,6 +8,16 @@ const trendingLinks = businessData.services.trendingLinks;
 const serviceLinks = businessData.services.customerServiceLinks;
 const contactLinks = businessData.contact.supportLinks;
 
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const qrPattern = Array.from({ length: 25 }, (_, index) =>
+  index % 4 === 0 || index % 7 === 0 ? "bg-white/80" : "bg-transparent"
+);
+
 function SocialIcon({ platform }: { platform: string }) {
   if (platform === "instagram") {
     return (
@@ -52,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {jewelleryLinks.map((link) => (
                 <li key={link}>
-                  <Link href="#" className="text-sm text-white/70 hover:text-[var(--color-gold-light)] transition-colors font-body">
+                  <Link href="#" className="text-sm text-white/70 hover:text-gold-light transition-colors font-body">
                     {link}
                   </Link>
                 </li>
@@ -66,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {collectionLinks.map((link) => (
                 <li key={link}>
-                  <Link href="#" className="text-sm text-white/70 hover:text-[var(--color-gold-light)] transition-colors font-body">
+                  <Link href={`/collections?collection=${slugify(link)}`} className="text-sm text-white/70 hover:text-gold-light transition-colors font-body">
                     {link}
                   </Link>
                 </li>
@@ -80,7 +90,7 @@ export default function Footer() {
             <ul className="space-y-2.5 mb-8">
               {trendingLinks.map((link) => (
                 <li key={link.title}>
-                  <Link href={link.href} className="text-sm text-white/70 hover:text-[var(--color-gold-light)] transition-colors font-body">
+                  <Link href={link.href} className="text-sm text-white/70 hover:text-gold-light transition-colors font-body">
                     {link.title}
                   </Link>
                 </li>
@@ -90,7 +100,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {infoLinks.map((link) => (
                 <li key={link.title}>
-                  <Link href={link.href} className="text-sm text-white/70 hover:text-[var(--color-gold-light)] transition-colors font-body">
+                  <Link href={link.href} className="text-sm text-white/70 hover:text-gold-light transition-colors font-body">
                     {link.title}
                   </Link>
                 </li>
@@ -104,7 +114,7 @@ export default function Footer() {
             <ul className="space-y-2.5 mb-8">
               {serviceLinks.map((link) => (
                 <li key={link.title}>
-                  <Link href={link.href} className="text-sm text-white/70 hover:text-[var(--color-gold-light)] transition-colors font-body">
+                  <Link href={link.href} className="text-sm text-white/70 hover:text-gold-light transition-colors font-body">
                     {link.title}
                   </Link>
                 </li>
@@ -115,7 +125,7 @@ export default function Footer() {
               <li className="text-sm text-white/70 font-body">{businessData.contact.primaryPhone}</li>
               {contactLinks.map((link) => (
                 <li key={link.title}>
-                  <Link href={link.href} className="text-sm text-white/70 hover:text-[var(--color-gold-light)] transition-colors font-body">
+                  <Link href={link.href} className="text-sm text-white/70 hover:text-gold-light transition-colors font-body">
                     {link.title}
                   </Link>
                 </li>
@@ -132,8 +142,8 @@ export default function Footer() {
             {/* QR Code placeholder */}
             <div className="w-28 h-28 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-8">
               <div className="grid grid-cols-5 gap-0.5 w-20 h-20">
-                {Array.from({ length: 25 }).map((_, i) => (
-                  <div key={i} className={`w-full h-full ${Math.random() > 0.4 ? "bg-white/80" : "bg-transparent"}`} />
+                {qrPattern.map((className, index) => (
+                  <div key={index} className={`w-full h-full ${className}`} />
                 ))}
               </div>
             </div>
@@ -171,7 +181,7 @@ export default function Footer() {
             <input
               type="email"
               placeholder={businessData.footer.newsletterPlaceholder}
-              className="flex-1 h-10 px-4 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-white/40 outline-none focus:border-[var(--color-gold)] transition-colors font-body"
+              className="flex-1 h-10 px-4 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-white/40 outline-none focus:border-gold transition-colors font-body"
               id="newsletter-email"
             />
             <button className="btn-gold text-xs px-5 py-2.5">Subscribe</button>

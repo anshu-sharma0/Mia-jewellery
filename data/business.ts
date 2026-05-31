@@ -16,6 +16,94 @@ export interface BusinessTestimonial {
   text: string;
 }
 
+export interface AboutPageCopy {
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    primaryCta: string;
+    secondaryCta: string;
+    highlight: string;
+  };
+  story: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    bulletPoints: string[];
+  };
+  missionVision: {
+    missionTitle: string;
+    missionBody: string;
+    visionTitle: string;
+    visionBody: string;
+    promiseTitle: string;
+    promiseBody: string;
+  };
+  whyChooseUs: Array<{
+    title: string;
+    description: string;
+  }>;
+  values: Array<{
+    title: string;
+    description: string;
+  }>;
+  stats: Array<{
+    value: string;
+    label: string;
+    detail: string;
+  }>;
+  journey: Array<{
+    label: string;
+    title: string;
+    description: string;
+  }>;
+  team: Array<{
+    name: string;
+    role: string;
+    description: string;
+  }>;
+  trust: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    highlights: string[];
+  };
+  cta: {
+    title: string;
+    body: string;
+    primaryCta: string;
+    secondaryCta: string;
+  };
+}
+
+export interface CollectionsPageCopy {
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    primaryCta: string;
+    secondaryCta: string;
+    highlight: string;
+  };
+  intro: {
+    eyebrow: string;
+    title: string;
+    body: string;
+  };
+  featured: {
+    eyebrow: string;
+    title: string;
+    body: string;
+  };
+  filterLabel: string;
+  sortLabel: string;
+  emptyState: {
+    title: string;
+    body: string;
+    cta: string;
+  };
+}
+
 export interface BusinessData {
   company: {
     name: string;
@@ -97,6 +185,8 @@ export interface BusinessData {
       badge: string;
     }>;
   };
+  aboutPage: AboutPageCopy;
+  collectionsPage: CollectionsPageCopy;
   testimonials: BusinessTestimonial[];
   footer: {
     appDownloadTitle: string;
@@ -128,7 +218,7 @@ export const businessData: BusinessData = {
     productLabel: "A TATA PRODUCT",
     tagline: "Fine Jewellery for Every Moment",
     aboutUs:
-      "Not specified in current website content.",
+      "Mia by Tanishq creates modern fine jewellery rooted in trust, craftsmanship, and wearable luxury for every moment.",
   },
   contact: {
     primaryPhone: "1800-266-0123",
@@ -188,7 +278,7 @@ export const businessData: BusinessData = {
       "Lovestruck",
     ],
     infoLinks: [
-      { title: "About Us", href: "#" },
+      { title: "About Us", href: "/about" },
       { title: "Blog", href: "#" },
       { title: "Loyalty Programs", href: "#" },
       { title: "Offers T&Cs", href: "#" },
@@ -214,7 +304,7 @@ export const businessData: BusinessData = {
       { title: "Necklaces & Pendants", href: "#" },
       { title: "Mangalsutra", href: "#" },
       { title: "Silver Jewellery", href: "#" },
-      { title: "Collections", href: "#" },
+      { title: "Collections", href: "/collections" },
       { title: "Gifting", href: "#" },
       { title: "More Jewellery", href: "#" },
     ],
@@ -357,6 +447,200 @@ export const businessData: BusinessData = {
         badge: "TRENDING",
       },
     ],
+  },
+  aboutPage: {
+    hero: {
+      eyebrow: "About Mia by Tanishq",
+      title: "Fine jewellery designed to feel personal, modern, and unmistakably premium.",
+      subtitle:
+        "Mia by Tanishq blends the trust of Tanishq, the scale of TATA, and a contemporary design language made for everyday elegance.",
+      primaryCta: "Explore Collections",
+      secondaryCta: "Visit a Store",
+      highlight: "A TATA Product",
+    },
+    story: {
+      eyebrow: "Our Story",
+      title: "Jewellery that makes everyday moments feel rare.",
+      body:
+        "Mia by Tanishq is built for women who want fine jewellery that works as beautifully in daily life as it does for celebrations. Our collections balance polished design, responsible craftsmanship, and the kind of trust customers expect from a heritage-led brand.",
+      bulletPoints: [
+        "Fine jewellery crafted for everyday wear and meaningful gifting.",
+        "Backed by Tanishq's service network and Tata's long-term trust.",
+        "Designed around modern silhouettes, soft colour stories, and timeless appeal.",
+      ],
+    },
+    missionVision: {
+      missionTitle: "Mission",
+      missionBody:
+        "To make premium fine jewellery accessible, wearable, and confidence-building across life's everyday milestones.",
+      visionTitle: "Vision",
+      visionBody:
+        "To be the brand customers choose when they want contemporary luxury with enduring trust.",
+      promiseTitle: "Brand Promise",
+      promiseBody:
+        "Premium design, thoughtful craftsmanship, and a shopping experience that feels calm, clear, and reassuring.",
+    },
+    whyChooseUs: [
+      {
+        title: "Heritage trust",
+        description:
+          "A premium jewellery experience anchored in the credibility of Tanishq and the TATA legacy.",
+      },
+      {
+        title: "Modern styling",
+        description:
+          "Contemporary collections styled for everyday elegance, gifting, and statement occasions.",
+      },
+      {
+        title: "Wide retail reach",
+        description:
+          "A nationwide store presence that makes discovery, service, and exchange feel convenient.",
+      },
+      {
+        title: "Customer-first service",
+        description:
+          "Transparent policies and support that reduce friction and build long-term confidence.",
+      },
+    ],
+    values: [
+      {
+        title: "Trust",
+        description:
+          "We keep the shopping journey clear, reliable, and reassuring from discovery to delivery.",
+      },
+      {
+        title: "Craftsmanship",
+        description:
+          "Every design is shaped to feel polished, comfortable, and durable in real life.",
+      },
+      {
+        title: "Accessibility",
+        description:
+          "Luxury should feel inviting, not intimidating, so our collections are designed for broad appeal.",
+      },
+      {
+        title: "Confidence",
+        description:
+          "We create jewellery that helps customers feel distinctive without overstatement.",
+      },
+    ],
+    stats: [
+      {
+        value: "200+",
+        label: "Stores Nationwide",
+        detail: "A service network built for convenience and lifetime exchange support.",
+      },
+      {
+        value: "6 Lakh+",
+        label: "Happy Buyers",
+        detail: "A growing customer base that reflects trust and repeat preference.",
+      },
+      {
+        value: "14",
+        label: "Signature Collections",
+        detail: "A curated mix of everyday, festive, and statement-led stories.",
+      },
+      {
+        value: "4+",
+        label: "Core Trust Promises",
+        detail: "Shipping, exchange, returns, and warranty-led reassurance.",
+      },
+    ],
+    journey: [
+      {
+        label: "Phase 01",
+        title: "Curated with heritage in mind",
+        description:
+          "The brand language was shaped to bring fine jewellery closer to everyday use without losing its premium feel.",
+      },
+      {
+        label: "Phase 02",
+        title: "Collections built around mood and occasion",
+        description:
+          "Signature stories like Sunkissed, Aurum, Starburst, and Manifest give customers easy ways to find a piece that fits their style.",
+      },
+      {
+        label: "Phase 03",
+        title: "Retail trust at scale",
+        description:
+          "A nationwide store footprint and exchange-friendly service model help reduce friction after purchase.",
+      },
+      {
+        label: "Today",
+        title: "A premium destination for modern fine jewellery",
+        description:
+          "Mia continues to combine refined design, strong service, and a calm shopping experience across channels.",
+      },
+    ],
+    team: [
+      {
+        name: "Design Studio",
+        role: "Collection curation",
+        description:
+          "Shapes silhouettes, palettes, and styling directions that feel current yet timeless.",
+      },
+      {
+        name: "Craftsmanship Team",
+        role: "Quality and finishing",
+        description:
+          "Focuses on the precision, polish, and wearability customers expect from fine jewellery.",
+      },
+      {
+        name: "Customer Experience",
+        role: "Service and support",
+        description:
+          "Ensures the buying journey stays transparent, helpful, and calm at every step.",
+      },
+    ],
+    trust: {
+      eyebrow: "Customer Trust",
+      title: "Built to reassure, not just impress.",
+      body:
+        "From hallmarked quality and free shipping to exchange support and store-backed service, the brand is designed around confidence before and after purchase.",
+      highlights: [
+        "BIS hallmarked quality",
+        "Lifetime exchange in 200+ stores",
+        "Free shipping on all orders",
+        "1 year warranty on purchases",
+      ],
+    },
+    cta: {
+      title: "Ready to find jewellery that feels like you?",
+      body:
+        "Explore the collections, compare styles, or visit a Mia store for a guided premium shopping experience.",
+      primaryCta: "Browse Collections",
+      secondaryCta: "Locate a Store",
+    },
+  },
+  collectionsPage: {
+    hero: {
+      eyebrow: "Collections",
+      title: "Curated fine jewellery stories for every mood, milestone, and moment.",
+      subtitle:
+        "Explore signature collections that move from everyday elegance to celebration-ready luxury with effortless style.",
+      primaryCta: "Shop Featured Collections",
+      secondaryCta: "See All Pieces",
+      highlight: "Curated for modern styling",
+    },
+    intro: {
+      eyebrow: "Curated Range",
+      title: "Designed to make discovery feel premium and personal.",
+      body:
+        "Use filters to narrow by style story, then sort the collection cards to quickly find the right mood, price point, or signature line.",
+    },
+    featured: {
+      eyebrow: "Featured Collections",
+      title: "The stories customers ask for first.",
+      body:
+        "A hand-picked selection of the most distinctive collection narratives, designed to surface the strongest conversion paths on the page.",
+    },
+    filterLabel: "Filter by story",
+    sortLabel: "Sort by",
+    emptyState: {
+      title: "No collections match this filter.",
+      body: "Try a different story or reset to view the full assortment.",
+      cta: "Reset filters",
+    },
   },
   testimonials: [
     {
