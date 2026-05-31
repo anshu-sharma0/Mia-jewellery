@@ -167,6 +167,8 @@ export interface BusinessData {
     subtitleTop: string;
     subtitleBottom: string;
     cta: string;
+    latitude: number;
+    longitude: number;
   };
 }
 
@@ -564,5 +566,7 @@ export const businessData: BusinessData = {
     subtitleTop: "Locate your nearest",
     subtitleBottom: "For an exquisite jewellery experience",
     cta: "Find store",
+    latitude: 19.076,
+    longitude: 72.8777,
   },
 };
